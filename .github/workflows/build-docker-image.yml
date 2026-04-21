@@ -1,5 +1,5 @@
 name: Build and Push Docker Image
-
+ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true
 on:
   push:
     branches: [ main ]
@@ -46,4 +46,4 @@ jobs:
             org.opencontainers.image.licenses=MIT
           cache-from: type=gha
           cache-to: type=gha,mode=max
-FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true
+
