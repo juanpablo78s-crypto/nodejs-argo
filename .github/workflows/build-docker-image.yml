@@ -1,6 +1,4 @@
 name: Build and Push Docker Image
-env:
-  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
 on:
   push:
     branches: [ main ]
@@ -34,7 +32,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           push: true
